@@ -1,0 +1,74 @@
+body{
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,105,121,1) 100%);
+    /* height: 100vh; */
+    color: rgb(193, 163, 98)  ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  cursor: pointer;
+  position: relative;
+  padding: 8px 18px;
+  font-size: 16px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 25px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+button:hover::before {
+  scale: 3;
+}
+
+button:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+button:active {
+  scale: 1;
+}
+
+.box{
+  margin-top: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.575);
+  height: 360px;
+  width: 300px;
+}
+input{
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  font-size: 15px;
+  padding: 6px;
+  /* text-align: center; */
+    /* outline:  rgb(193, 163, 98); */
+    outline-color: rgb(193, 163, 98);
+    outline-style: solid;
+    outline-width: 2px;
+}
